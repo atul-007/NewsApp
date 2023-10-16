@@ -5,7 +5,7 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 import axios from "axios"
 
 export default function News(props) {
-    const apiKey='46964830afae4d358560e0d321021f84'
+    const apiKey='df13fa1cab224415bb77efc02bc56c36'
     const date= new Date
     const [loading, setLoading] = useState(true)
     const [article, setArticle] = useState([])
@@ -42,6 +42,8 @@ export default function News(props) {
             email
         }).then((res)=>{
             alert("Subscribed ")
+        }).catch((err)=>{
+          alert("Already Subscribed")
         })
       }
     return (<>
