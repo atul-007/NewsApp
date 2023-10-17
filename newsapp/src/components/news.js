@@ -5,7 +5,7 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 import axios from "axios"
 
 export default function News(props) {
-    const apiKey='df13fa1cab224415bb77efc02bc56c36'
+    const apiKey='be9dc743000345c0b16bd68eba1e0fb4'
     const date= new Date
     const [loading, setLoading] = useState(true)
     const [article, setArticle] = useState([])

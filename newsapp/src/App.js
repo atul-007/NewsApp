@@ -3,6 +3,7 @@ import {useState} from 'react'
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Navbar from './components/navbar';
 import News from './components/news';
+import LiveNews from './components/livenews';
 
 function App() {
   const [search, setsearch] = useState({
@@ -32,6 +33,7 @@ function App() {
     <>
     <BrowserRouter>
     <Navbar searching={searching} setSelect={setSelect} resetSearch={resetSearch} />
+    <LiveNews/>
     <Routes>
         <Route exact path="/" element={<News search={search}key='general' select={select} /> } />
         <Route exact path="business" element={<News search={search}key='business' select={select} category='business'/>} />
